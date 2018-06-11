@@ -40,8 +40,11 @@ describe "A cell" do
       expect(cell.alive?).to be_falsy
     end
 
-    xit 'a dead cell with fewer than two live neighbors stays dead' do
-
+    it 'a dead cell with fewer than two live neighbors stays dead' do
+      cell = Cell.new
+      cell.kill
+      expect(cell.neighbors.count).to be_within(1).of(0)
+      expect(cell.alive?).to be_falsy
     end
 
     # TODO: Cell rules
