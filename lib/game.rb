@@ -1,1 +1,3 @@
 # TODO
+class Game
+end
