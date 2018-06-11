@@ -12,4 +12,8 @@ class Cell
 	def kill
 		@alive = false
 	end
+
+	def tick
+
+	end
 end

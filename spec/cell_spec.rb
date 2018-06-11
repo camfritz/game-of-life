@@ -28,7 +28,7 @@ describe "A cell" do
 
   it 'has a tick method' do
     cell = Cell.new
-    expect(cell.tick).to exist
+    expect(cell).to respond_to(:tick)
   end
 
   describe 'after a tick' do
