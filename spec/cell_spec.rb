@@ -1,6 +1,9 @@
 require_relative '../lib/cell'
 
 describe "A cell" do
+  # before(:each) do
+  #   let(:cell) { Cell.new }
+  # end
 
   it 'exists' do
     Cell.new
@@ -18,8 +21,9 @@ describe "A cell" do
     expect(cell.alive?).to be_falsy
   end
 
-  xit 'has neighbors, which is initially an empty array' do
-
+  it 'has neighbors, which is initially an empty array' do
+    cell = Cell.new
+    expect(cell.neighbors).to be_empty
   end
 
   xit 'has a tick method' do
