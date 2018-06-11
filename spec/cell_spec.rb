@@ -33,8 +33,10 @@ describe "A cell" do
 
   describe 'after a tick' do
 
-    xit 'a live cell with fewer than two live neighbors dies' do
-
+    it 'a live cell with fewer than two live neighbors dies' do
+      cell = Cell.new
+      expect(cell.neighbor_count).to be_within(1).of(0)
+      expect(cell.alive?).to be_falsy
     end
 
     xit 'a dead cell with fewer than two live neighbors stays dead' do
