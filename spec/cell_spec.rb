@@ -35,7 +35,8 @@ describe "A cell" do
 
     it 'a live cell with fewer than two live neighbors dies' do
       cell = Cell.new
-      expect(cell.neighbor_count).to be_within(1).of(0)
+      expect(cell.neighbors.count).to be_within(1).of(0)
+      cell.tick
       expect(cell.alive?).to be_falsy
     end
 

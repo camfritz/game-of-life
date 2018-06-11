@@ -14,6 +14,8 @@ class Cell
 	end
 
 	def tick
-
+		if neighbors.count < 2
+			kill
+		end
 	end
 end
