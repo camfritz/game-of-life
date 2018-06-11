@@ -41,6 +41,14 @@ describe "A cell" do
 
     # TODO: Cell rules
     it 'a dead cell with exactly three live neighbors becomes alive' do
+      cell.kill
+      expect(cell.neighbors.count).to be_within(1).of(0)
+      expect(cell.alive?).to be_falsy
+
+      3.times do
+        cell.add_neighbor
+        cell.tick
+      end
       expect(cell.neighbors.count).to eq(3)
       expect(cell.alive?).to be_truthy
     end
